@@ -1,0 +1,40 @@
+{
+  "name": "@enymo/react-intersection-observer",
+  "version": "0.0.0",
+  "description": "React hook wrapping the intersection observer API",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "tsup": {
+    "entry": [
+      "src/js/index.tsx"
+    ],
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "dts": true
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enymo/react-intersection-observer.git"
+  },
+  "author": "enymo GmbH",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.46",
+    "postcss": "^8.4.17",
+    "tsup": "^6.2.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@enymo/react-better-context": "^1.0.1",
+    "@enymo/ts-nullsafe": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  }
+}
