@@ -44,9 +44,9 @@ export function ObserverProvider({options, children}: {
     )
 }
 
-export function useObserved(callback: Listener, dependencies: React.DependencyList = []) {
+export function useObserved<T extends Element>(callback: Listener, dependencies: React.DependencyList = []) {
     const context = useIntersectionObserver();
-    const ref = useRef<Element>(null);
+    const ref = useRef<T>(null);
     
     useEffect(() => {
         const target = ref.current;
